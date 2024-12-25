@@ -1,0 +1,14 @@
+---
+layout: base.njk
+title: My Blog
+---
+
+<h1>Welcome to Jim's Blog</h1>
+
+<p>center</p>
+<ul>
+{% for post in collections.post %}
+<h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+<p>{{ post.data.decription }}</p>
+{% endfor %}
+</ul>
